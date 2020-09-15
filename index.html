@@ -1,43 +1,84 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <head>
+        <title>Event registration</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style9.css">
-    
-    <title>Star Events</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="navbar navbar-style ">
-            <div class="container">
-              <div class="navbar-header">
-                  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#hide">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-                  <img class="logo" src="logos.png" alt="image">
-                  <div class="company"><b>Star Events</b></div>
-              </div>
-              <div class="collapse navbar-collapse" id="hide">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a class="active" href="#" onclick="initial()"><b>Home</b></a></li>
-                <li><a  href="#" onclick="initial1()"><b>Registration Form</b></a></li>
-                <li><a  href="#" onclick="initial2()"><b>Show Registrations</b></a></li>
-                <li><a href="#" onclick="initial0()"><b>Contact Us</b></a></li>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style9.css">
+       <style>
+           .navbar{
+               margin-top: -30px;
+           }
+           .jumbotron{
+               height: 100px;
+               padding-top: 20px;
+            }
+            .c1{
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                padding: 20px;
+                margin-top: 50px;
+                border-radius: 5px;
+            }
+            .c1:hover{
+                box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.521);
+            }
+
+            #demo1{
+                margin-top: 50px;
+            }
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+            #home{
+                width: 100%;
+                margin: 0px auto;
+                margin-top: 10px;
+            }
+            .i1{
+                position: relative;
+                bottom: -20px;
+                left: 0px;
+                width: 100%;
+                background-color: rgba(128, 128, 128, 0.205);
+                color: black;
+                text-align: center;
+                }
+                .footer1{
+                position: relative;
+                left: 0;
+                bottom: 0px;
+                width: 100%;
+                background-color: rgba(128, 128, 128, 0.205);
+                color: black;
+                text-align: center;
+                }
+                
+                
+       </style>
+    </head>
+    <body>
+        <div class="jumbotron text-center"> <h1 style="overflow-y: hidden;">Star Events</h1></div>
+       
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="nav navbar-nav nav-pills" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#" onclick="initial()">Home</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#" onclick="initial1()">Register Form</a></li>
+                <li class="nav-item"><a class="nav-link" id="ii2" data-toggle="pill" href="#" onclick="initial2()">Registrant list</a></li>
               </ul>
-            </div>
-        </div>
-        </nav>
-
-      </header>
-  <div id="home">
+            </div>  
+          </nav>
+       
+        
+       <div id="home">
               <img class="main" src="main1.jpg" alt="image">
               <div style="text-align: center; color: rgb(66, 120, 172); font-size: 280%; background-color: rgb(171, 233, 214); margin-top: 0px;" class="Activity" ><b>Our Activities</b></div>
               
@@ -97,407 +138,98 @@
 </div>
 </div>
 
-
-<div id="register_form" style="background-color: rgb(126, 133, 126);" >
-        <div class="Register">   
-  <div class="container">
-      <div class="col-lg-6 m-auto d-block">
-          <div class="c1">
-            <h3 style="color: rgb(228, 87, 36); font-size: xx-large; text-shadow: rgb(197, 132, 109);"><b>Registration</b></h3>
-              <form id="form_register">
-                  <div class="form-group">
-                      <input  type="text" class="form-control" name="fname" placeholder="Enter first name" id="i1" required>                      
-                      <span id="alt1" class="text-danger font-weight-bold"> </span>
-                  </div>
-                  <div class="form-group">
-                      <input type="text" class="form-control" name="lname" placeholder="Enter last name" id="i2" required>                   
-                      <span id="alt2" class="text-danger font-weight-bold"> </span>
-                  </div>
-                  <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Enter email" id="i3" required>
-                      <span id="alt3" class="text-danger font-weight-bold"> </span>
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" class="form-control" name="phone" placeholder="Enter Mobile Number" id="i4" required>
-                    <span id="alt4" class="text-danger font-weight-bold"> </span>
-                </div>  
-
-                <div class="form-group">
-                  <label for="demo_overview">Choose Hotel as per your convenience:</label>
-                  <select class="form-control" data-role="select-dropdown" name="Hotel" id="i5" data-profile="minimal" required>
-                    <option value="7-Star">7-Star</option>
-                    <option value="5-Star">5-Star</option>
-                    <option value="4-Star">4-Star</option>
-                    <option value="3-Star">3-Star</option> 
-                   </select>
-                   <span id="alt5" class="text-danger font-weight-bold"> </span>
-              </div>
-
-
-              <div class="form-group">
-                <label for="Evento">Events to be carried out:</label><br>
-                      <input type="radio" name="event" id="i6" value="Conferences and seminars ">&nbsp;Conferences and seminars </br>
-                     <input type="radio" name="event" id="i6" value="Marriage Ceremony">&nbsp;Marriage Ceremony</br>
-                     <input type="radio" name="event" id="i6" value="Birthday Parties">&nbsp;Birthday Parties</br>
-                     <input type="radio" name="event" id="i6" value="College Events">&nbsp;College Events </br>
-                     <input type="radio" name="event" id="i6" value="Mall Activities">&nbsp;Mall Activities</br>
-                     <input type="radio" name="event" id="i6" value="Concerts">&nbsp;Concerts</br>
-                     <span id="alt6" class="text-danger font-weight-bold"> </span>  
-            </div>
-        
-             
-                 
-                  <label for="Date">Date/Time:</label>
-                  <input type="date" id="date" name="date">
-                             <input type="time" id="time" name="dt"><br></br>
-             
-                  
-                             <div class="form-group">
-                              <label for="demo_overview">No. of people to be visited:</label>
-                              <select class="form-control" data-role="select-dropdown" id="i7" name="people" data-profile="minimal" required>
-                                <option value="50-100">50-100</option>
-                                <option value="100-200">100-200</option>
-                                <option value="300-500">300-500</option>  
-                                <option value="500-800">500-800</option> 
-                                <option value="800-1000">800-1000</option>
-                               </select>
-                               <span id="alt7" class="text-danger font-weight-bold"> </span>
-                          </div> 
-
-
-                 
-                          <div class="form-group">
-                            <label for="demo_overview">Select Menu</label>
-                            <select class="form-control" data-role="select-dropdown" name="city" id="i8" data-profile="minimal" required>
-                                <option value="Veg">Veg</option>
-                                <option value="Non-Veg">Non-Veg</option>
-                                <option value="Chinese">Chinese</option>
-                                <option value="Continental">Continental</option>
-                                <option value="All">All</option>
-                             </select>
-                             <span id="alt8" class="text-danger font-weight-bold"> </span>
-                        </div>
-             
-                  <div class="form-group">
-                      <label for="demo_overview">Select City</label>
-                      <select class="form-control" data-role="select-dropdown" name="city" id="i9" data-profile="minimal" required>
-                          <option value="Latur">Latur</option>
-                          <option value="Pune">Pune</option>
-                          <option value="Mumbai">Mumbai</option>
-                          <option value="Delhi">Delhi</option>
-                          <option value="Kolkata">Kolkata</option>
-                        
-                          <option value="Nagpur">Nagpur</option>
-                       </select>
-                       <span id="alt9" class="text-danger font-weight-bold"> </span>
-                  </div>
-                            
-                  <div class="form-group">
-                      <div class="form-check">
-                          <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" id="i10" required> I Assure that all the above information is true.
-                          </label>
-                        </div>
-                        <span id="alt10" class="text-danger font-weight-bold"> </span>
-                  </div>
-                  <input type="button" onclick="return initial3()" class="btn btn-primary" value="Submit">
-                  
-                  
-              </form>
-          </div>
-          
-      </div>
-      
-      
-    </div>      
-  </div>
-  <div>
-    <div class="mail" style="background-color: mintcream; color: orangered">
-          <p style="text-align: center;">&copy; For any Queries Contact
-          <a href="mailto:rsuryawanshi@mitaoe.ac.in">rsuryawanshi@mitaoe.ac.in</a></p>
-    </div>
-  </div>
-      
-          
-</div>
-
-
-
-
-
-
-
-<div id="registrant_list">
+        <div id="register_form">
             
-  <div class="container-fluid">
-      <div class="table-responsive">
-          <div id="demo1"></div>
-      </div>
-  
-  </div>
-  <div class="footer1">
-      <div class="container-fluid">
-        <p style="text-align: center;">&copy; For any Queries Contact
-          <a href="mailto:rsuryawanshi@mitaoe.ac.in">rsuryawanshi@mitaoe.ac.in</a></p>
-          </div>
-    </div>
-</div>
-
-
-
-<div id="contact_us">
-    <div class="example1" style="background-color: rgb(126, 133, 126);">
-        <div class="Info">
-            <img src="Cont.jpg" alt="Contact" class="Comp" style="width: 100%; height: 360px;">
-            <img src="Contact.jpg" alt="Contact" >
-            <div class="Bio">
-            <div style="color: orangered; font-size: x-large;float: left; ">Address:</div>
-           <p class="para" style="text-align: justify; font-size: large; display: inline;">
-              &nbsp; In front Of Shri Ram Theatre,<br> Star Appartments,Latur Dist.Latur. pin-413512.
-           </p><br><br>
-           <div style="color: orangered; font-size: x-large; float: left;">Customer Care:</div>
-           <p style="text-align: justify; font-size: large;">
-               9923279371
-           </p><br><br>
-      
-           <div class="social-icons">
-            <p><a href="http://www.facebook.com.rohitsuryawanshi.2065" target="_blank"><img src='facebook.jpg' /></a></p>
-            <p><a href="http://www.instagram.com" target="_blank"><img src='instagram.jpg' /></a></p>
-            <p><a href="http://www.twitter.com" target="_blank"><img src='Twitter.png' /></a></p>
+            <div class="container">
+                
+                <div class="col-lg-6 m-auto d-block">
+                    <div class="c1">
+                        <div class="text-success" id="temp"></div>
+                        <div class="text-danger" id="temp1"></div>
+                        <form id="form_register">
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="fname" placeholder="Enter first name" id="i1" required>                      
+                                <span id="alt1" class="text-danger font-weight-bold"> </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="lname" placeholder="Enter last name" id="i2" required>                   
+                                <span id="alt2" class="text-danger font-weight-bold"> </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Enter email" id="i3" required>
+                                <span id="alt3" class="text-danger font-weight-bold"> </span>
+                            </div>
+                            <div class="form-group">
+                                <!-- <div class="form-check-inline"> -->
+                                     <input type="radio" name="gender" id="i4" value="M">Male
+                                <!-- </div>
+                                <div class="form-check-inline"> -->
+                                    <input type="radio" name="gender" id="i4" value="F">Female
+                                <!-- </div> -->
+                                <span id="alt4" class="text-danger font-weight-bold"> </span>  
+                            </div>
+                            <div class="form-group">
+                                <label for="demo_overview">Select City</label>
+                                <select class="form-control" data-role="select-dropdown" id="i5" data-profile="minimal" required>
+                                    <option value="Pune">Pune</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">Delhi</option>
+                                 </select>
+                                 <span id="alt5" class="text-danger font-weight-bold"> </span>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" name="phone" placeholder="Enter Mobile Number" id="i6" required>
+                                <span id="alt6" class="text-danger font-weight-bold"> </span>
+                            </div>             
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" id="i7" required>All the above information is true.
+                                    </label>
+                                  </div>
+                                  <span id="alt7" class="text-danger font-weight-bold"> </span>
+                            </div>
+                            <input type="button" onclick="return initial3()" class="btn btn-primary" value="Submit">
+                            
+                            
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                   
+            </div>
+            <div>
+                <div class="i1">
+                    <p>&copy; Copyright 2020</p>
+                    <a href="mailto:rsuryawanshi@mitaoe.ac.in">rsuryawanshi@mitaoe.ac.in</a></p>
+              </div>
+            </div>
+                
+                    
         </div>
-           
-           <p class="para" style="text-align: center; font-size: large;">
-              Feel free to Contact us. We will be available 24/7 at your Service.
-           </p>
-          </div> 
-        </div>
-      </div>
-    </div>
-
-
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-      $('ul li a').click(function(){
-      $('li a').removeClass("active");
-      $(this).addClass("active");
-      });
-      });
-
-  var today = new Date();
-  var t = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var a=[
-      
-      ];
-  var x = document.getElementById("home");
-  var y= document.getElementById("register_form");
-  var z= document.getElementById("registrant_list");
-  var w= document.getElementById("contact_us");
-      x.style.display="block";
-      y.style.display="none";
-      z.style.display="none";
-      w.style.display="none";
-function initial0(){
-  if(w.style.display==="none")
-  {  
-      w.style.display="block";
-      x.style.display="none";
-      y.style.display="none";
-      z.style.display="none";
-  }
-}       
-function initial(){
-  if(x.style.display==="none")
-  { 
-      w.style.display="none";
-      x.style.display="block";
-      y.style.display="none";
-      z.style.display="none";
-  }
-}
-function initial1(){
-  if(y.style.display==="none")
-  {
-      w.style.display="none";
-      x.style.display="none";
-      y.style.display="block";
-      z.style.display="none";
-  }
-}
-  function initial2(){
-      if(z.style.display==="none")
-      {
-          w.style.display="none";
-          x.style.display="none";
-          y.style.display="none";
-          z.style.display="block"; 
-          if(a.length == 0)
-          {
-              document.getElementById("demo1").innerHTML="<h3><div class='container text-center'>No-one has registered till now. Register Now.</div></h3>";
-          }
-          else{
-              var text;
-              text= "<table class='table table-striped table-bordered table-hover'><thead class='thead-dark'>";
-              text=text + "<tr><th>Time-Stamp</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Mobile</th><th>Hotel</th><th>Events</th><th>Date</th><th>Time</th><th>People</th><th>Menu</th><th>City</th><tr></thead><tbody>";
-              for(i=0;i<a.length;i++)
-              {
-                  text= text + "<tr><td>" + a[i].time + "</td><td>"+ a[i].fname + "</td><td>" + a[i].lname + "</td><td>" + a[i].email + "</td><td>" + a[i].phone + "</td><td>" + a[i].Hotel + "</td><td>" + a[i].event + "</td><td>" + a[i].d + "</td><td>" + a[i].t + "</td><td>" + a[i].people + "</td><td>" + a[i].menu + "</td><td>" + a[i].city + "</td><tr>" ;
-              }
-              text += "</tbody></table>";
-              document.getElementById("demo1").innerHTML=text;
-          }
-          
-      }
-      
-  }
-  function initial3()
-  {   
-      var b,c,d,f,g,e,h,j,n,m,q,r;
-      b=document.getElementById("i1").value;
-      c=document.getElementById("i2").value;
-      d=document.getElementById("i3").value;
-      f=document.getElementById("i4").value;
-      g=document.getElementById("i5").value;
-      h=document.getElementById("i6").value;
-      j=document.getElementById("i7").value;
-      n=document.getElementById("i8").value;
-      m=document.getElementById("i9").value;
-      e=document.getElementById("i10").checked;
-      q=document.getElementById("date").value;
-      r=document.getElementById("time").value;
-      
-      if(b == ""){
         
-  document.getElementById('alt1').innerHTML =" *First Name can't be Empty";
-  
-  
-  return false;
-}
-      else if((b.length <= 3) || (b.length > 20)) {
-  document.getElementById('alt1').innerHTML =" *First Name length must be between 2 and 20";
-  
-          return false;
-}
-      else if(!isNaN(b)){
-  document.getElementById('alt1').innerHTML =" *only characters are allowed";
-  return false;
-}
-      else{
-          document.getElementById('alt1').innerHTML ="";
-      }
-      if(c == ""){
-  document.getElementById('alt2').innerHTML =" *Please fill the Last Name field";
-  return false;
-}
-      else if((c.length <= 3) || (c.length > 20)) {
-  document.getElementById('alt2').innerHTML =" *Last Name length must be between 3 and 20";
-          return false;
-}
-      else if(!isNaN(c)){
-  document.getElementById('alt2').innerHTML =" *only characters are allowed";
-  return false;
-}
-      else{
-          document.getElementById('alt2').innerHTML ="";
-      }
-
-
-      
-
-      var at="@"
-      var dot="."
-      var lat=d.indexOf(at)
-      var lstr=d.length
-      var ldot=d.indexOf(dot)
-      if(d == "")
-      {
-          document.getElementById('alt3').innerHTML ="*Please enter E-mail ID";
-          return false;
-      }
-      if (d.indexOf(at)==-1){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.indexOf(at)==-1 || d.indexOf(at)==0 || d.indexOf(at)==lstr){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.indexOf(dot)==-1 || d.indexOf(dot)==0 || d.indexOf(dot)==lstr){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.indexOf(at,(lat+1))!=-1){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.substring(lat-1,lat)==dot || d.substring(lat+1,lat+2)==dot){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.indexOf(dot,(lat+2))==-1){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else if (d.indexOf(" ")!=-1){
-          document.getElementById('alt3').innerHTML ="*Invalid E-mail ID";
-          return false;
-      }
-      else
-      {
-          document.getElementById('alt3').innerHTML ="";
-      }
-      if(f == ""){
-				document.getElementById('alt4').innerHTML =" **Please fill the Mobile Number field";
-				return false;
-			}
-			if(isNaN(f)){
-				document.getElementById('alt4').innerHTML =" **User must write digits only not characters";
-				return false;
-			}
-			if(f.length!=10){
-				document.getElementById('alt4').innerHTML =" **Mobile Number must be 10 digits only";
-				return false;
-			}
-            else{
-                document.getElementById('alt4').innerHTML ="";
-            }
-
-            if(h == null)
-      {
-          document.getElementById('alt6').innerHTML =" *Select Event";
-          return false;
-      }
-      else{
-          document.getElementById('alt6').innerHTML ="";
-      }
-
-
-   if(e == false)
-            {
-                document.getElementById('alt10').innerHTML =" **Required";
-				return false;
-            }
-            else{
-                document.getElementById('alt10').innerHTML ="";
-                alert("Form Has been Submitted Successfully")
-            }
-      
-  
-      
-      var to = new Date();
-      var v = to.getHours() + ":" + to.getMinutes() + ":" + to.getSeconds();
-      var k={time: v,fname: b, lname: c, email: d,phone: f,Hotel: g,event: h,d: q,t: r,people: j, menu: n, city: m}
-      a.push(k);
-      
-      document.getElementById("form_register").reset();
-
-
-
-
-      
-  }  
-</script>
-
-
-</body>
+        <div id="registrant_list">
+            
+            <div class="container-fluid">
+                <div class="table-responsive">
+                    <div id="demo1"></div>
+                </div>
+            
+            </div>
+            <div class="footer1">
+                <div class="container-fluid">
+                    <p>&copy; Copyright 2020</p>
+                    <a href="mailto:rsuryawanshi@mitaoe.ac.in">rsuryawanshi@mitaoe.ac.in</a></p>
+                    </div>
+              </div>
+        </div>
+        
+        <script src="jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    
+    </body>
 </html>
