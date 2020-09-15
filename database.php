@@ -10,9 +10,9 @@ class database
 
     public function __construct() {
         $this->host = 'localhost';
-        $this->dbname = 'yoga';
-        $this->username = 'root';
-        $this->password = '';
+        $this->dbname = 'id14871732_rohit';
+        $this->username = 'id14871732_root';
+        $this->password = '^R62Ma4yYu$2<]Vg';
     }
 
     public function Connect(){
